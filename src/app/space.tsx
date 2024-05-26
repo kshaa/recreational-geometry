@@ -1,4 +1,4 @@
-import Rectangle from './rectangle'
+import Axis from "./axis";
 
 export interface RectangleProps {
   scale?: number // 0 - 100 - Inf
@@ -13,6 +13,8 @@ export default function Space(props: RectangleProps) {
     <div style={{width: '100%', height: '100%', overflow: 'hidden', background: 'rgba(0,0,0,0.1'}}>
       <div style={{width: '100%', height: '100%', transform: `scale(${scale})`}}>
         <div style={{position: 'relative', width: '100%', height: '100%'}}>
+          <Axis isHorizontal={true}></Axis>
+          <Axis isHorizontal={false}></Axis>
           {props.children}
         </div>
       </div>
